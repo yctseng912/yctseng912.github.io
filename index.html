@@ -1,20 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>personal website</title>
-</head>
-  <body style="width: 65%; margin: auto; background-color: rgb(234, 236, 238, 0.2);">
-    <br/><br/>
-    <h2>Yung-Chi Tseng / 曾詠琪</h2>
-    <p>E-mail: s1121411{at}mail{dot}yzu{dot}edu{dot}tw; dora{dot}930912{at}gmail{dot}com;</p>
+  <title>Yung-Chi Tseng | Personal Website</title>
 
-    <p>Research social network<br/>
-    <a href="https://github.com/yctseng912/" target="_blank">GitHub</a>
-      
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+      background: linear-gradient(120deg, #eef2f7, #f8f9fb);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      width: 65%;
+      max-width: 900px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+	
+	.contact {
+	  margin-top: 10px;
+	}
+
+	.contact-item {
+	  margin: 8px 0;
+	  font-size: 16px;
+	}
+
+	.label {
+	  font-weight: 600;
+	  margin-right: 8px;
+	  color: #444;
+	}
+
+	.contact a {
+	  color: #2a7de1;
+	  text-decoration: none;
+	}
+
+	.contact a:hover {
+	  text-decoration: underline;
+	}
+
+
+    h2 {
+      margin-top: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    h3 {
+      margin-top: 35px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 8px;
+    }
+
+    p {
+      line-height: 1.8;
+      margin: 12px 0;
+    }
+
+    a {
+      color: #2a7de1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #eef4ff;
+      color: #2a5bd7;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="main">
+    <h2>Yung-Chi Tseng / 曾詠琪</h2>
+
+    <h3>Contact</h3>
+
+		<div class="contact">
+		  <div class="contact-item">
+			<span class="label">📧 School Mail:</span>
+			<a href="mailto:s1121411@mail.yzu.edu.tw">
+			  s1121411@mail.yzu.edu.tw
+			</a>
+		  </div>
+
+		  <div class="contact-item">
+			<span class="label">📧 Personal Mail:</span>
+			<a href="mailto:dora.930912@gmail.com">
+			  dora.930912@gmail.com
+			</a>
+		  </div>
+		</div>
+
+	<h3>Research Social Network</h3>
+    <p>
+      🔗 <a href="https://github.com/yctseng912/" target="_blank">GitHub</a>
+    </p>
+
     <h3>Education</h3>
     <ul>
-    <li>Computer Science and Engineering, Yuan Ze University (2023.9 ~ )
+      <li>
+        Computer Science and Engineering, Yuan Ze University  
+        <br>
+        <span class="tag">2023.09 ~ Present</span>
+      </li>
     </ul>
-  </body>
+
+    <footer>
+      © 2025 Yung-Chi Tseng
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("main").classList.add("show");
+    });
+  </script>
+</body>
 </html>
